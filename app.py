@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -72,6 +72,18 @@ def delete_latest():
         removed = DATA.pop()
         return jsonify(success=True, removed=removed)
     return jsonify(success=False, message="No data to delete")
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        return redirect(url_for('dashboard'))
+    return render_template("login.html")
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        return redirect(url_for('login'))
+    return render_template("register.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
