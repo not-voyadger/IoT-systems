@@ -1,9 +1,9 @@
-Project Description
+# Project Description
 
 This project is a web application built using the Flask framework and Bootstrap for frontend styling. The goal of the application is to simulate temperature measurements and provide a user-friendly interface for data display and management.
 Implemented Features
 
-Functional Endpoints:
+## Functional Endpoints:
 
 The application contains the following endpoints:
 
@@ -13,11 +13,11 @@ The application contains the following endpoints:
 
 /register – User registration page
 
-Template Inheritance:
+## Template Inheritance:
 
 The application uses template inheritance for the navigation bar and the main body content, ensuring clean and maintainable HTML structure.
 
-Dashboard Page:
+## Dashboard Page:
 
 Displays the latest measured temperature value along with its timestamp.
 
@@ -27,6 +27,6 @@ A "Delete" button that removes the oldest value from the dataset. After deletion
 
 Graph: A visual graph displaying temperature trends over time is included using a JavaScript library.
 
-Simulated Data:
+## Simulated Data:
 
 Temperature data is simulated and stored in a predefined list of dictionaries in app.py.
