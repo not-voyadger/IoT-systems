@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.getElementById("deleteBtn").addEventListener("click", async () => {
-    await fetch("/api/delete", { method: "POST" });
+    await fetch("/api/delete", { method: "DELETE" });
     fetchData();
   });
 
